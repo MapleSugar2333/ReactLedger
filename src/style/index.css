@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+* {
+	box-sizing: border-box;
+}
+
+dl,
+dd,
+p,
+h3,
+html,
+body {
+	margin: 0;
+}
+
+body {
+	font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+html,
+body,
+#root,
+.app {
+	height: 100%;
+	width: 100%;
+}
+
+html,
+body {
+	padding: 0;
+}
+
+img.icon {
+	height: 20px;
+	width: 20px;
+}
+
+:root:root {
+	--adm-color-primary: #7b7;
+}

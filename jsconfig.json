@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"ReduxToolkit": ["@reduxjs/toolkit"],
+			"$/*": ["src/*"],
+			"$c/*": ["src/component/*"],
+			"$h/*": ["src/hook/*"],
+			"$p/*": ["src/page/*"],
+			"$s/*": ["src/style/*"],
+			"$sr/*": ["src/store/*"],
+			"$sl/*": ["src/store/slice/*"],
+			"$u/*": ["src/utils/*"]
+		}
+	}
+}

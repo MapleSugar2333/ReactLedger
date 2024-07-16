@@ -1,0 +1,62 @@
+$black: #111;
+
+.billDetail {
+	height: 100%;
+	background-image: url(/img/bill-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: rgba(245, 245, 245, 0.9);
+	color: $black;
+
+	.nav {
+		--adm-font-size-10: 16px;
+		color: $black;
+		background-color: transparent;
+
+		&::after {
+			height: 0;
+		}
+		.nav-title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.arrow {
+			display: inline-block;
+			width: 7px;
+			height: 7px;
+			margin-top: -3px;
+			margin-left: 9px;
+			border-top: 2px solid $black;
+			border-left: 2px solid $black;
+			transform: rotate(225deg);
+			transform-origin: center;
+			transition: all 0.3s;
+		}
+		.expand {
+			transform: translate(0, 2px) rotate(45deg);
+		}
+	}
+	.content {
+		height: calc(100% - 50px);
+		overflow-y: scroll;
+
+		> .overview {
+			width: 290px;
+			padding: 20px;
+		}
+		.monthBill {
+			--ka-text-color: #888;
+			height: 75px;
+			padding: 15px;
+			margin: 10px;
+			border-radius: 10px;
+			background: #fff;
+
+			.date {
+				margin-bottom: 10px;
+				font-size: 16px;
+			}
+		}
+	}
+}

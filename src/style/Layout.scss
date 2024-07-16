@@ -1,0 +1,31 @@
+$main: #7b7;
+$tab: 50px;
+
+.kaLayout {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+
+	.page {
+		height: calc(100% - $tab);
+	}
+	.tabbar {
+		height: $tab;
+
+		.adm-tab-bar-item {
+			color: #888;
+		}
+		.adm-tab-bar-item-active {
+			color: $main;
+		}
+	}
+}
+.kaDate {
+	.adm-picker-header {
+		a {
+			color: $main;
+		}
+	}
+}

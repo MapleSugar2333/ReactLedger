@@ -1,0 +1,86 @@
+$black: #111;
+
+.dailyBill {
+	margin-bottom: 10px;
+	border-radius: 10px;
+	background: #fff;
+
+	.header {
+		padding: 15px 15px 10px 15px;
+
+		.dateIcon {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 21px;
+			margin-bottom: 9px;
+
+			.date {
+				font-size: 14px;
+			}
+			.arrow {
+				display: inline-block;
+				width: 7px;
+				height: 7px;
+				margin-top: -3px;
+				margin-left: 9px;
+				border-top: 2px solid $black;
+				border-left: 2px solid $black;
+				transform: rotate(225deg);
+				transform-origin: center;
+				transition: all 0.3s;
+			}
+			.arrow.expand {
+				transform: translate(0, 2px) rotate(45deg);
+			}
+		}
+	}
+	.billList {
+		display: none;
+		padding: 15px 10px 15px 15px;
+
+		.bill {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 43px;
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.icon {
+				margin-right: 10px;
+				font-size: 25px;
+			}
+			.detail {
+				flex: 1;
+				padding: 4px 0;
+
+				.billType {
+					height: 17px;
+					line-height: 17px;
+					font-size: 15px;
+				}
+			}
+			.money {
+				font-size: 17px;
+
+				&.pay {
+					color: #f98;
+				}
+				&.income {
+					color: #7b7;
+				}
+			}
+		}
+	}
+}
+.dailyBill.expand {
+	.header {
+		border-bottom: 1px solid #ddd;
+	}
+	.billList {
+		display: block;
+	}
+}

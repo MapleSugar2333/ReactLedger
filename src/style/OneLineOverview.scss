@@ -1,0 +1,49 @@
+$black: #111;
+
+@mixin blackText($fontSize: 13px) {
+	font-size: $fontSize;
+	color: $black;
+}
+@mixin type($color) {
+	font-size: 10px;
+	margin-right: 2.5px;
+	color: $color;
+}
+
+.oneLineOverview {
+	display: flex;
+	justify-content: space-between;
+
+	.income,
+	.pay {
+		flex: 1;
+
+		.money {
+			@include blackText;
+		}
+	}
+	.income {
+		.type {
+			@include type(#7b7);
+		}
+	}
+	.pay {
+		.type {
+			@include type(#f98);
+		}
+	}
+	.balance {
+		flex: 1;
+		margin-bottom: 5px;
+		text-align: right;
+
+		.money {
+			line-height: 17px;
+			margin-right: 6px;
+			font-size: 17px;
+		}
+		.type {
+			@include blackText(10px);
+		}
+	}
+}

@@ -1,0 +1,159 @@
+$bg: #dfe;
+$main: #7b7;
+$black: #111;
+$grey: #777;
+$white: #fff;
+
+.keepAccounts {
+	height: 100%;
+	background-color: $bg;
+
+	.nav {
+		--adm-font-size-10: 16px;
+		color: $black;
+		background-color: transparent;
+
+		&::after {
+			height: 0;
+		}
+		.adm-nav-bar-back-arrow {
+			font-size: 20px;
+		}
+	}
+	.header {
+		.kaType {
+			padding: 0 10px;
+			text-align: center;
+
+			.adm-capsule-tabs-header {
+				padding: 12px 6px 0;
+				border-bottom: 0;
+
+				// &:first-child {
+				// 	margin-right: 10px;
+				// }
+			}
+		}
+		.kaFormWrapper {
+			padding: 15px 22.5px 18px;
+
+			.kaForm {
+				display: flex;
+				height: 50px;
+				padding: 11px 15px 11px 12px;
+				border: 0.5px solid $black;
+				border-radius: 9px;
+				background-color: $white;
+
+				.date {
+					display: flex;
+					align-items: center;
+					height: 28px;
+					padding: 6px 9px;
+					border-radius: 4px;
+					color: $main;
+					background-color: $bg;
+
+					* {
+						font-size: 16px;
+					}
+					.icon {
+						margin-right: 6px;
+					}
+				}
+				.kaInput {
+					flex: 1;
+					display: flex;
+					align-items: center;
+
+					.input {
+						flex: 1;
+						margin-right: 10px;
+						--text-align: right;
+						--font-size: 24px;
+						--color: $main;
+						--placeholder-color: #ddd;
+					}
+					.iconYuan {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+	.kaTypeList {
+		height: calc(100% - 175px);
+		padding: 20px 11px;
+		padding-bottom: 70px;
+		overflow-y: scroll;
+		background: $white;
+		border-radius: 20px 20px 0 0;
+		-ms-overflow-style: none; /* Internet Explorer 10+ */
+		scrollbar-width: none; /* Firefox */
+
+		&::-webkit-scrollbar {
+			display: none; /* Chrome and Safari */
+		}
+		.kaType {
+			margin-bottom: 25px;
+			font-size: 12px;
+			color: $black;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.title {
+				padding-left: 5px;
+				margin-bottom: 5px;
+				font-size: 13px;
+				color: $grey;
+			}
+			.list {
+				display: flex;
+
+				.item {
+					width: 65px;
+					height: 65px;
+					padding: 9px 0;
+					margin-right: 7px;
+					text-align: center;
+					border: 0.5px solid $white;
+
+					&:last-child {
+						margin-right: 0;
+					}
+					.icon {
+						height: 25px;
+						line-height: 25px;
+						margin-bottom: 5px;
+						font-size: 25px;
+					}
+				}
+				.item.selected {
+					border: 0.5px solid $black;
+					border-radius: 5px;
+					background: $bg;
+				}
+			}
+		}
+	}
+	.btns {
+		position: fixed;
+		bottom: 15px;
+		width: 100%;
+		text-align: center;
+
+		.btn {
+			width: 180px;
+			--border-width: 0;
+			--border-radius: 100px;
+			--background-color: $white;
+			--text-color: $grey;
+		}
+		.btn.save {
+			background-color: $bg;
+			color: $main;
+			opacity: 0.9;
+		}
+	}
+}
